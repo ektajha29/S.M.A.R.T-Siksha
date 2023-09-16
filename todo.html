@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .todo-list {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        .delete-button {
+            background-color: #ff3333;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <div class="todo-list">
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Add a new task" required>
+            <input type="submit" value="Add">
+        </form>
+        <ul id="tasks">
+            <!-- Tasks will be added here -->
+        </ul>
+    </div>
+
+    <script>
+        // JavaScript code to handle the to-do list functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const todoForm = document.getElementById('todo-form');
+            const todoInput = document.getElementById('todo-input');
+            const tasksList = document.getElementById('tasks');
+
+            todoForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const taskText = todoInput.value.trim();
+                if (taskText !== '') {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+                        ${taskText}
+                        <button class="delete-button">Delete</button>
+                    `;
+                    tasksList.appendChild(listItem);
+                    todoInput.value = '';
+
+                    // Add event listener to the delete button
+                    const deleteButton = listItem.querySelector('.delete-button');
+                    deleteButton.addEventListener('click', function () {
+                        listItem.remove();
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
