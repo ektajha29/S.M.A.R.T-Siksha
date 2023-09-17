@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poem Notes</title>
+    <!-- Include Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image:url("Backgroundchild.jpeg");
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        textarea, input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+        }
+        .Marks{
+            color:white;
+            font-weight:800px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Poem Notes</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Display the Poem or Comprehension Content -->
+                <div class="form-group">
+                    <label for="content">Poem or Comprehension:</label>
+                    <textarea class="form-control" id="content" rows="8" readonly>
+                        Once upon a time, in a land far away,
+                        A beautiful rainbow brightened the day.
+                        With colors so vivid, it arched in the sky,
+                        Bringing joy to all who passed by.
+
+                        Red, orange, and yellow, the first three so bright,
+                        Like a fiery sunset in the fading light.
+                        Green, blue, and indigo, the next ones in line,
+                        Like nature's own artwork, so divine.
+
+                        And at the very end, there was violet so deep,
+                        Like the petals of flowers that in gardens sleep.
+                        This rainbow of colors, a magical sight,
+                        Filled hearts with wonder and pure delight.
+                    </textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Input for Notes and Content Evaluation -->
+                <div class="form-group">
+                    <label for="notes">Your Notes:</label>
+                    <textarea class="form-control" id="notes" rows="8" placeholder="Add your notes here..."></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="evaluateContent()">Evaluate Content</button>
+                <div class="result mt-3">
+                    <strong class="Marks">Marks for Content:</strong>
+                    <p id="contentMarks"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for content evaluation -->
+    <script>
+        function evaluateContent() {
+            const notes = document.getElementById("notes").value;
+            
+            // You can implement a grading system here based on the content quality
+            // For simplicity, let's assign a score based on the length of notes
+            const contentLength = notes.split(' ').length;
+            let marks;
+
+            if (contentLength < 20) {
+                marks = "Poor (0/10)";
+            } else if (contentLength < 50) {
+                marks = "Average (5/10)";
+            } else {
+                marks = "Excellent (10/10)";
+            }
+
+            // Display content evaluation result
+            const contentMarksElement = document.getElementById("contentMarks");
+            contentMarksElement.textContent = marks;
+        }
+    </script>
+</body>
+</html>

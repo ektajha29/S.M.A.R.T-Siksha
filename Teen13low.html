@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rainbow and Its Colors</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            background-image: url("Backgroundchild.jpeg");
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        /* MCQ Styles */
+        .mcq {
+            margin-top: 20px;
+        }
+
+        .mcq p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .mcq input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .mcq label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .mcq button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .mcq button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Rainbow and Its Colors</h1>
+    </header>
+    <div class="container">
+        <p>Once upon a time, there was a magical thing in the sky called a rainbow. Have you ever seen a rainbow after the rain? It's a beautiful arch made of colors!</p>
+
+        <p>Rainbows have many colors. Can you guess how many? There are seven colors in a rainbow. Let's learn their names!</p>
+
+        <p>The first color is red. It's like the color of a juicy apple.</p>
+
+        <p>Next is orange. It looks just like a ripe orange.</p>
+
+        <p>Then, we have yellow. Think of a bright sunflower.</p>
+
+        <p>Green is the color of fresh grass and leaves.</p>
+
+        <p>Blue is the color of the sky on a sunny day.</p>
+
+        <p>Indigo is a bit like the color of blue jeans.</p>
+
+        <p>And finally, there's violet. It's the color of pretty purple flowers.</p>
+
+        <p>When the rain stops and the sun comes out, it makes a rainbow in the sky. Each color of the rainbow is like magic!</p>
+
+        <p>So, the next time you see a rainbow, remember its seven beautiful colors: red, orange, yellow, green, blue, indigo, and violet.</p>
+
+        <p>Isn't nature amazing? Enjoy the colors all around you!</p>
+        <!-- MCQs -->
+    <h2>Test Your Knowledge</h2>
+    <p>Choose the correct answers:</p>
+
+    <p>1. How many colors are there in a rainbow?</p>
+    <input type="radio" name="q1" value="a"> a) Three<br>
+    <input type="radio" name="q1" value="b"> b) Five<br>
+    <input type="radio" name="q1" value="c"> c) Seven<br>
+
+    <p>2. What color is the second one in a rainbow?</p>
+    <input type="radio" name="q2" value="a"> a) Blue<br>
+    <input type="radio" name="q2" value="b"> b) Green<br>
+    <input type="radio" name="q2" value="c"> c) Orange<br>
+
+    <p>3. What is the color of the sky on a sunny day?</p>
+    <input type="radio" name="q3" value="a"> a) Red<br>
+    <input type="radio" name="q3" value="b"> b) Blue<br>
+    <input type="radio" name="q3" value="c"> c) Yellow<br>
+
+    <br>
+    <button onclick="checkAnswers()">Submit</button>
+    
+    <script>
+        function checkAnswers() {
+            const answers = {
+                q1: document.querySelector('input[name="q1"]:checked'),
+                q2: document.querySelector('input[name="q2"]:checked'),
+                q3: document.querySelector('input[name="q3"]:checked')
+            };
+
+            const correctAnswers = {
+                q1: "c",
+                q2: "c",
+                q3: "b"
+            };
+
+            let score = 0;
+
+            for (const question in answers) {
+                if (answers[question] && answers[question].value === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            alert(`Your score: ${score} out of 3`);
+        }
+    </script>
+    </div>
+</body>
+</html>

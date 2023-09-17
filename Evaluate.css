@@ -1,0 +1,91 @@
+/* Base styles for age group and IQ level strips */
+.age-group {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+body{
+    background-img:url("");
+}
+.iq-level {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Additional styles for different age groups */
+.age-group.child {
+    background-color: #b4d4b4;
+}
+
+.age-group.teen {
+    background-color: #f5e3c1;
+}
+
+.age-group.adult {
+    background-color: #fbb5b5;
+}
+
+/* Additional styles for different IQ levels */
+.iq-level.low {
+    background-color: #fbb5b5;
+}
+
+.iq-level.average {
+    background-color: #f5e3c1;
+}
+
+.iq-level.high {
+    background-color: #b4d4b4;
+}
+
+/* Header styles */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Paragraph styles */
+p {
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .age-group, .iq-level {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}

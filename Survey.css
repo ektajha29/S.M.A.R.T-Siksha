@@ -1,0 +1,153 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("Survey.jpg");
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+/* Navigation menu styles */
+nav {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+/* Form styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Elegant colors */
+.elegant-bg {
+    background-color: #e6e6e6; /* Light Gray */
+    color: #333;
+}
+
+.elegant-text {
+    color: #555; /* Dark Gray */
+}
+
+/* Additional styles */
+.success {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.warning {
+    background-color: #ffc107; /* Yellow */
+    color: #333;
+}
+
+.info {
+    background-color: #17a2b8; /* Teal */
+    color: white;
+}
+
+.danger {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+/* Custom section styles */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Custom button styles */
+.custom-button {
+    background-color: #ff6600; /* Orange */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+    background-color: #ff5500; /* Darker Orange */
+}
+
+/* Add more styles as needed */

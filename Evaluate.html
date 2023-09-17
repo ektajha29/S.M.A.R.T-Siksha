@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Groups and IQ Levels</title>
+    <link href="Evaluate.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="age-group child">
+        <h2>Teen</h2>
+        <p>Age group: 13-22 years</p>
+        <div class="iq-level low">
+            <h3>Low IQ</h3>
+            <p><a href="child1avg.html">IQ Level: Below Average</a></p>
+        </div>
+        <div class="iq-level average">
+            <h3>Average IQ</h3>
+            <p><a href="Child0Low.html">IQ Level: Within Average Range</a></p>
+        </div>
+        <div class="iq-level high">
+            <h3>High IQ</h3>
+            <p><a href="child0High.html">IQ Level: Above Average</a></p>
+        </div>
+    </div>
+
+    <div class="age-group teen">
+        <h2>Child</h2>
+        <p>Age group: 0-12 years</p>
+        <div class="iq-level low">
+            <h3>Low IQ</h3>
+            <p><a href="Teen13low.html">IQ Level: Below Average</a></p>
+        </div>
+        <div class="iq-level average">
+            <h3>Average IQ</h3>
+            <p><a href="Teen13Avg.html">IQ Level: Within Average Range</a></p>
+        </div>
+        <div class="iq-level high">
+            <h3>High IQ</h3>
+            <p><a href="Teen13High.html">IQ Level: Above Average</a></p>
+        </div>
+    </div>
+
+    <div class="age-group adult">
+        <h2>Adult</h2>
+        <p>Age group: 20+ years</p>
+        <div class="iq-level low">
+            <h3>Low IQ</h3>
+            <p>IQ Level: Below Average</p>
+        </div>
+        <div class="iq-level average">
+            <h3>Average IQ</h3>
+            <p>IQ Level: Within Average Range</p>
+        </div>
+        <div class="iq-level high">
+            <h3>High IQ</h3>
+            <p>IQ Level: Above Average</p>
+        </div>
+    </div>
+
+    <button id="backButton" style="background-color: #007bff; color: white;">Back</button>
+
+    <script>
+        // Add an event listener to the back button
+        document.getElementById('backButton').addEventListener('click', function() {
+            // Use the browser's built-in back functionality
+            window.history.back();
+        });
+    </script>
+</body>
+</html>

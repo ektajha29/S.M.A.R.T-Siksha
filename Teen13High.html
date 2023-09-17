@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Wishes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("Backgroundchild.jpeg");
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bolder;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        blockquote {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #message-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .message {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Best Wishes for a Beautiful Future</h1>
+        <blockquote>
+            "The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt
+        </blockquote>
+    </header>
+    <div class="container">
+        <textarea id="message" rows="4" placeholder="Write your best wishes and inspirational messages here..."></textarea>
+        <button onclick="addMessage()">Add Message</button>
+        <ul id="message-list"></ul>
+    </div>
+
+    <script>
+        function addMessage() {
+            const messageText = document.getElementById("message").value.trim();
+            if (messageText === "") {
+                return; // Don't add empty messages
+            }
+
+            const messageList = document.getElementById("message-list");
+            const messageItem = document.createElement("li");
+            messageItem.className = "message";
+            messageItem.textContent = messageText;
+            messageList.appendChild(messageItem);
+
+            // Clear the input field after adding the message
+            document.getElementById("message").value = "";
+        }
+    </script>
+</body>
+</html>
